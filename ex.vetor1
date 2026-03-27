@@ -1,0 +1,20 @@
+﻿using System;
+class Program
+{
+    static void Main()
+    {
+        int[] vet = new int[10]; 
+        int soma = 0;
+
+        Console.WriteLine("Digite 10 números inteiros:");
+
+        for (int i = 0; i < 10; i++) 
+        {
+            Console.Write($"Número {i + 1}: ");
+            vet[i] = int.Parse(Console.ReadLine());
+            soma = soma + vet[i]; 
+        }
+
+        Console.WriteLine("\nA soma dos valores é: " + soma);
+    }
+}
