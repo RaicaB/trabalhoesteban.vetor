@@ -1,0 +1,35 @@
+﻿using System;
+class Program
+{
+    static void Main()
+    {
+        int[] vet = new int[10]; 
+        Console.WriteLine("Digite 10 números inteiros:");
+
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write("Número " + (i + 1) + ": ");
+            vet[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.WriteLine("\nVetor original:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write(vet[i] + " ");
+        }
+
+        for (int i = 0; i < 5; i++) 
+        {
+            int temp = vet[i];
+            vet[i] = vet[9 - i];   
+            vet[9 - i] = temp;
+        }
+
+        Console.WriteLine("\n\nVetor após as trocas:");
+        for (int i = 0; i < 10; i++)
+        {
+            Console.Write(vet[i] + " ");
+        }
+    }
+}
+
