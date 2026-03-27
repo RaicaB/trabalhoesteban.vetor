@@ -1,0 +1,36 @@
+﻿using System;
+class Program
+{
+    static void Main()
+    {
+        int[] vet = new int[8]; 
+
+        Console.WriteLine("Digite 8 números inteiros:");
+
+        for (int i = 0; i < 8; i++)
+        {
+            Console.Write("Número " + (i + 1) + ": ");
+            vet[i] = int.Parse(Console.ReadLine());
+        }
+
+        Console.Write("\nDigite um número para verificar: ");
+        int valor = int.Parse(Console.ReadLine());
+
+        bool encontrado = false;
+
+        for (int i = 0; i < 8; i++)
+        {
+            if (vet[i] == valor)
+            {
+                Console.WriteLine("\nO número está na posição: " + i);
+                encontrado = true;
+                break; 
+            }
+        }
+
+        if (!encontrado)
+        {
+            Console.WriteLine("\nO número não se encontra no vetor.");
+        }
+    }
+}
